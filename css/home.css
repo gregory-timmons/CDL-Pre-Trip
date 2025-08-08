@@ -1,0 +1,83 @@
+.mobile__header{
+    border: 1px solid white;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile__menu{
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: calc(300 / 16 * 1rem);
+    justify-content: center;
+    gap: 1.5rem;
+}
+.card{
+    border-radius: .5rem;
+    padding: 5rem 0;
+    border: 3px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    background-color: var(--blue2);
+    transition: border-color, transform .3s ease;
+
+    /* keeps my cards square */
+    /* aspect-ratio: 1 / 1; */
+}
+.card:hover{
+    border-color: var(--light-blue);
+    /* border-color: #c57f16; */
+    transform: scale(1.07);
+     -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+a + svg{
+    color: var(--white);
+    height: 4rem;
+    
+}
+.mobile__menu-link{
+    font-size: var(--fs-base);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.mobile__menu-link::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+span{
+    display: block;
+}
+
+@media (min-width: 760px){
+    .mobile__menu{
+        grid-template-columns: calc(500 / 16 * 1rem);
+    }
+    .mobile__menu-link{
+    font-size: var(--fs-xl);
+}
+a + svg{
+    height: 5rem;
+}
+
+}
+@media (min-width: 1200px){
+    .mobile__menu{
+
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    }
+
+}

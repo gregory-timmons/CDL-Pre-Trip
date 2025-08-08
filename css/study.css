@@ -1,0 +1,42 @@
+.container{
+    border: 1px solid black;
+    width: 90%;
+    max-width: 1200px;
+    margin: 5rem auto 0 auto;
+}
+ol{
+    /* list-style-type: '\002A'; */
+    font-size: 1rem;
+    /* counter-reset: step-counter; */
+}
+.step__sub-title{
+    font-size: var(--fs-base);
+    font-weight: 700;
+}
+.step__content{
+    font-size: var(--fs-17);
+    
+}
+.heading{
+    border-bottom: 1.5px solid black;
+    display: inline-block;
+    
+}
+.sub-heading{
+     border-bottom: 1.5px solid black;
+    display: inline-block;
+}
+article{
+    background-color: hsla(219, 87%, 30%, 0.3);
+}
+
+@media (min-width: 760px){
+    .step__sub-title{
+    font-size: var(--fs-large);
+   
+}
+
+}
+
+
+

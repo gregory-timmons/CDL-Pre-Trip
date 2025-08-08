@@ -1,0 +1,13 @@
+
+.text-center{
+    text-align: center;
+}
+
+.btn{
+    background-color: var(--blue2);
+    padding: .7rem 1.2rem;
+    border-radius: .3rem;
+    position: fixed;
+    top: 1rem;
+    left: 5rem;
+}

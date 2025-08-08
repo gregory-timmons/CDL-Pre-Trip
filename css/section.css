@@ -1,0 +1,123 @@
+.title{
+    color: var(--dark-blue);
+    color: var(--white);
+    text-align: center;
+}
+.accordion{
+     width: 90%; 
+     max-width: 1140px;
+     width: 114rem;
+    margin: 5rem auto 0 auto;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: .5rem;
+    background-color: var(--blue2);
+    padding: 0 1.6rem 1.6rem 1.6rem;
+   
+
+    /* background-color: oklch(92.9% 0.013 255.508); */
+    /* background-color: var(--blue); */
+    /* display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(300px,11fr); */
+}
+.accordion-item{
+    background-color: #ffffff;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease-in;
+     /*This was making them different sizes when in display flex*/
+    /* margin: 0 auto; */
+
+    
+}
+.accordion-item:hover{
+    border-color: black;
+}
+.accordion__header{
+    position: relative;
+    min-height: 2rem;
+    padding: .5rem 0 .5rem 1.5rem;
+    /* border-radius: .5rem .5rem 0 0; */
+    display: flex;
+   align-items: center;
+   transition: background-color 0.3s ease-in;  
+}
+.accordion__header:hover{
+    background-color: hsla(219, 87%, 30%, 0.3);
+}
+.accordion__header > p{
+    font-size: var(--fs-15);
+    font-weight: bold;
+}
+.accordion__header::after{
+    content:'\002B' ;
+    position: absolute;
+    right: 1rem;
+    font-size: var(--fs-xl);
+    transition:0.3s ease ;
+    color: #c57f16;
+}
+.accordion__header.active::after{
+    content: '\002D';
+    font-size:2.5rem ;
+}
+
+.accordion__body{
+    /* padding: 1rem; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    /* padding-bottom: 1.6rem; */
+    /* max-width: 60ch; */
+    /* border: 1px solid red; */
+}
+.accordion__content{
+    padding: 1rem;
+    /* border-left: 3px solid var(--blue2); */
+    margin-left: 1rem;
+    line-height: 1.4;
+    padding-bottom: 1rem;
+    /* height: 15rem; */
+    max-width: 85ch;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+   
+    /* border-image: linear-gradient(to right,#008f68, #fae042) 1;
+    border-image: linear-gradient(to right,transparent, #34495e, transparent) 1; */
+    
+}
+.accordion__content::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 3px;
+    /* border: 3px solid var(--blue2); */
+    /* height: calc(100% - 9rem); */
+    height: 85%;
+    background-color: var(--blue2);
+}
+
+@media (min-width:700px){
+    .accordion__content{
+        /* font-size:1.1rem; */
+    }
+ .accordion__header > p{
+    font-size: var(--fs-17);
+ }
+ .accordion__content{
+    font-size: var(--fs-17);
+ }
+
+ .accordion__header{
+
+    /* font-size: var(--fs-17); */
+   
+}
+}
